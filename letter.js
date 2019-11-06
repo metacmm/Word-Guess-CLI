@@ -1,11 +1,13 @@
 var Letter = function(letter){
     this.letter = letter;
     this.isGuessed = false;
-    this.displayLetter = function(){
-        return isGuessed? this.letter : "_";
+    this.toString = function(){
+        return this.isGuessed? this.letter : "_";
     }
     this.guessLetter = function(userGuess){
-        isGuessed = this.letter === userGuess;
+        if (this.letter.toLowerCase() === userGuess.toLowerCase()){
+            this.isGuessed = true;
+        }
     }
 }
 
