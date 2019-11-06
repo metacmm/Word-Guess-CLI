@@ -26,23 +26,23 @@ var startGame = function () {
                 ]).then(function (response) {
                     curWord.guessWord(response.userGuess);
                     let display = curWord.displayWord();
-                    console.log(display);
+                    console.log(display + "\n");
                     if (curWord.findALetter) {
                         if (curWord.strWord === answer) {
-                            console.log("You got it right!");
+                            console.log("\x1b[32m%s\x1b[0m","You got it right!!!");
                             startGame();
                         } else {
-                            console.log("Correct!");
+                            console.log("\x1b[32m%s\x1b[0m","CORRECT!");
                             playRound();
                         }
                     } else {
                         count--;
                         if (count === 0) {
-                            console.log("You failed!");
+                            console.log("\x1b[31m%s\x1b[0m","You failed!!!");
                             startGame();
                         } else {
-                            console.log("Incorrect!");
-                            console.log(count + " guess remaining!!!");
+                            console.log("\x1b[31m%s\x1b[0m", "INCORRECT!");
+                            console.log(count + " guess remaining!");
                             playRound();
                         }
                     }
