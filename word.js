@@ -18,9 +18,4 @@ var Word = function(word){
     }
 }
 
-/*
-Word.prototype.add = function(lett){
-    this.word.push(new Letter(lett));
-}
-*/
 module.exports = Word;
