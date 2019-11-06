@@ -17,11 +17,6 @@ var startGame = function () {
             let curWord = new Word(answer);
 
             var playRound = function () {
-                if (display === answer || count === 0) {
-                    let completeText = count === 0 ? "You failed!" : "You got it right!";
-                    console.log(completeText);
-                    startGame();
-                }
                 inquirer.prompt([
                     {
                         name: "userGuess",
@@ -33,16 +28,29 @@ var startGame = function () {
                     let display = curWord.displayWord();
                     console.log(display);
                     if (curWord.findALetter) {
-                        console.log("Correct!");
+                        if (curWord.strWord === answer) {
+                            console.log("You got it right!");
+                            startGame();
+                        } else {
+                            console.log("Correct!");
+                            playRound();
+                        }
                     } else {
                         count--;
-                        console.log("Incorrect!");
-                        console.log(count + " guess remaining!!!");
+                        if (count === 0) {
+                            console.log("You failed!");
+                            startGame();
+                        } else {
+                            console.log("Incorrect!");
+                            console.log(count + " guess remaining!!!");
+                            playRound();
+                        }
                     }
-                    playRound();
                 });
             }
             playRound();
+        } else {
+            return;
         }
     });
 }

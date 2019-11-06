@@ -1,5 +1,5 @@
 module.exports = [
-    "Johann Sebastian Bach",
+   /* "Johann Sebastian Bach",
     "Wolfgang Amadeus Mozart",
     "Ludwig van Beethoven",
     "Pyotr Ilyich Tchaikovsky",
@@ -18,5 +18,25 @@ module.exports = [
     "Franz Liszt",
     "Sergei Rachmaninov",
     "Antonin Dvorak",
-    "Gustav Mahler"
+    "Gustav Mahler"*/
+    "Bach",
+    "Mozart",
+    "Beethoven",
+    "Tchaikovsky",
+    "Wagner",
+    "Brahms",
+    "Schubert",
+    "Schumann",
+    "Verdi",
+    "Handel",
+    "Haydn",
+    "Vivaldi",
+    "Stravinsky",
+    "Chopin",
+    "Mendelssohn",
+    "Debussy",
+    "Liszt",
+    "Rachmaninov",
+    "Dvorak",
+    "Mahler"
 ];
