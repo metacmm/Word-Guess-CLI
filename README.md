@@ -2,19 +2,24 @@
 
 ## Introduction
 
-Word-Guess-CLI is a command line interface for word guess game. It has a build-in word set, which will be randomly selected everytime for user to practise the word spelling.
-
+Word-Guess-CLI is a command line interface for word guess game. It has a
+build-in word set, which will be randomly selected everytime for user to
+practise the word spelling.
 
 ## Instruction
 
-* Run ``` node index ``` to start the game, you will initially have 10 times guess for each word
+- `npm i` to install application dependencies
 
-* Type the letter you guessed and it will prompt if this guess is in the word or not
+- Run `node index` or `npm start` to start the game, you will initially have 10
+  times guess for each word
 
-* If your guess is wrong, you lose one time guess
+- Type the letter you guessed and it will prompt if this guess is in the word or
+  not
 
-* You succeed if you guessed all letters in the word
+- If your guess is wrong, you lose one time guess
 
-* If you run out of all 10 times, you lose
+- You succeed if you guessed all letters in the word
 
-* You will be prompted to continue or not once you succeed or lose
+- If you run out of all 10 times, you lose
+
+- You will be prompted to continue or not once you succeed or lose
